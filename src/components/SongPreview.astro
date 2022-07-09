@@ -1,0 +1,83 @@
+---
+export interface Props {
+  url: string;
+  name: string;
+  album: string;
+  year: string;
+  artist: string;
+}
+
+const { url, name, album, year, artist } = Astro.props;
+---
+
+<li class="listItem">
+  <a class="link" href={url}>
+    <figure class="set">
+      <div class="album">
+        <img class="albumCover" src={`/album${url}.jpg`} alt={`${album} 專輯封面`} loading="lazy" />
+      </div>
+      <figcaption class="description">
+        <h2 class="name">{name}</h2>
+        <span class="whoWhen" set:html={`${artist}﹒${year}`} />
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+<style lang="scss">
+  .listItem {
+    list-style: none;
+  }
+
+  .link {
+    display: block;
+    margin-left: -8px;
+    padding: 8px 0 8px 8px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+      background-color: hsl(var(--color-shade100));
+      transition: background-color 0.2s ease-in;
+    }
+  }
+
+  .set {
+    display: grid;
+    grid: auto / 48px 1fr;
+    column-gap: 12px;
+    margin: 0;
+  }
+
+  .album {
+    padding: 0 2px;
+  }
+
+  .albumCover {
+    max-width: 100%;
+    aspect-ratio: 1;
+    border: 1px solid hsla(var(--color-shade300), 0.5);
+    border-radius: 4px;
+  }
+
+  .description {
+    display: grid;
+    grid: auto auto / auto;
+  }
+
+  .name {
+    margin: -6px 0 4px;
+    color: hsl(var(--color-dawn));
+    font-size: 2.4rem;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  .whoWhen {
+    color: hsl(var(--color-shade1000));
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+</style>

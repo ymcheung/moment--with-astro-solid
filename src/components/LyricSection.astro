@@ -1,0 +1,17 @@
+<section class="lyricSection">
+  <slot />
+</section>
+
+<style lang="scss">
+.lyricSection {
+  display: grid;
+  row-gap: 16px;
+
+  :global(p) {
+    margin: 0;
+    color: hsl(var(--color-shade1600));
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
+}
+</style>

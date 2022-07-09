@@ -1,0 +1,53 @@
+---
+export interface Props {
+	name: string;
+	album: string;
+	year: string;
+	permalink: string;
+}
+
+const { name, album, year, permalink } = Astro.props;
+---
+
+<h1 class="song">
+	<img class="albumCover" src={`/album/${permalink}.jpg`} alt={`收錄在專輯 ${album}。`} />
+	<span class="name">{name}</span>
+	<span class="year">{year}</span>
+</h1>
+
+<style lang="scss">
+	.song {
+		display: grid;
+		grid: "cover song" auto "cover year" auto / 48px 1fr;
+		column-gap: 12px;
+		margin: 0;
+		padding: 0 16px 16px;
+
+		@media screen and (min-width: 992px) {
+			padding: 0 0 16px;
+		}
+	}
+
+	.albumCover {
+		grid-area: cover;
+		max-width: 100%;
+		aspect-ratio: 1;
+		border: 1px solid hsla(var(--color-shade300), 0.5);
+		border-radius: 4px;
+	}
+
+	.name {
+		grid-area: song;
+		margin-top: -4px;
+		color: hsl(var(--color-dawn));
+		font-size: 2.8rem;
+	}
+
+	.year {
+		grid-area: year;
+		color: hsl(var(--color-shade700));
+		font-size: 1.4rem;
+		font-weight: 400;
+		line-height: 20px;
+	}
+</style>

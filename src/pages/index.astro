@@ -1,13 +1,19 @@
 ---
-import Index from '../layouts/Index.astro';
-import Card from '../components/Card.astro';
+import Home from '../layouts/Home.astro';
 ---
 
-<Index title="Welcome to Astro.">
-	<main>
-
+<Home title="Welcome to Astro.">
+	<!-- <SiteNameHeader /> -->
+	<main class="songs">
+		<ul class="songsList">
+			<!-- {allSongs.map(({ url, frontmatter }) =>
+      <SongPreview url={url} name={frontmatter.name} album={frontmatter.album} year={frontmatter.year}
+        artist={frontmatter.artist} />
+      )} -->
+		</ul>
 	</main>
-</Index>
+	<!-- <Footer /> -->
+</Home>
 
 <style>
 
