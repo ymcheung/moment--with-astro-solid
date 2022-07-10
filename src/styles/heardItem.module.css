@@ -1,0 +1,55 @@
+.player {
+  width: 320px;
+  height: 180px;
+  position: fixed;
+  right: 12px;
+  bottom: 24px;
+}
+
+@media screen and (min-width: 992px) {
+  .player {
+    top: 48px;
+    bottom: initial;
+  }
+}
+
+.mediaList {
+  margin: 0;
+  padding: 8px 12px;
+  background-color: hsl(var(--color-shade100));
+  border-radius: 12px;
+}
+
+.mediaName {
+  display: inline-block;
+  margin-right: 4px;
+  color: hsl(var(--color-shade1100));
+  font-size: 1.6rem;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.mediaYear {
+  display: inline-block;
+  color: hsl(var(--color-shade700));
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.expand {
+  padding: 0;
+  vertical-align: top;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.expand:disabled {
+  opacity: 0.12;
+  cursor: not-allowed;
+}
+
+.iconYoutube {
+  width: 32px;
+}

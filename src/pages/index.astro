@@ -1,20 +1,57 @@
 ---
 import Home from '../layouts/Home.astro';
+import BaseHead from '../components/BaseHead.astro';
+import SiteNameHeader from '../components/SiteNameHeader.astro';
+import SongPreview from '../components/SongPreview.astro';
+import Footer from '../components/Footer.astro';
+
+let title = '看電影看劇時，聽到喜歡的音樂';
+let description = '讓電影、日美劇致敬的 60 到 80 年代經典歌曲！';
+let schemaHome = true;
+let datePublished = '2020-09-21';
+let dateModified = '2022-5-03';
+
+let allSongs = await Astro.glob('./*/*.md');
+
+allSongs = allSongs.sort((older, newer) =>
+	new Date(newer.frontmatter.dateModified).valueOf() - new Date(older.frontmatter.dateModified).valueOf()
+);
 ---
 
+<head>
+	<BaseHead {title} {description} {schemaHome} {datePublished} {dateModified} />
+</head>
+
 <Home title="Welcome to Astro.">
-	<!-- <SiteNameHeader /> -->
+	<SiteNameHeader />
 	<main class="songs">
 		<ul class="songsList">
-			<!-- {allSongs.map(({ url, frontmatter }) =>
-      <SongPreview url={url} name={frontmatter.name} album={frontmatter.album} year={frontmatter.year}
-        artist={frontmatter.artist} />
-      )} -->
+			{allSongs.map(({ url, frontmatter }) =>
+			<SongPreview url={url} name={frontmatter.name} album={frontmatter.album} year={frontmatter.year}
+				artist={frontmatter.artist} />
+			)}
 		</ul>
 	</main>
-	<!-- <Footer /> -->
+	<Footer />
 </Home>
 
-<style>
+<style lang="scss">
+	.songs {
+		grid-area: songs;
+		margin-bottom: 48px;
+		padding: 0 16px;
+		font-family: var(--font-body);
 
+		@media screen and (min-width: 992px) {
+			padding: 0;
+		}
+	}
+
+	.songsList {
+		display: grid;
+		grid: auto / repeat(auto-fill, minmax(320px, 1fr));
+		gap: 16px 24px;
+		margin: 0;
+		padding: 0;
+	}
 </style>
