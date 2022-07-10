@@ -1,0 +1,100 @@
+---
+layout: ../../layouts/Song.astro
+setup: |
+  import LyricSection from '../../components/LyricSection.astro'
+name: 'Take on Me'
+album: 'Hunting High and Low'
+year: '1985'
+artist: 'A-Ha'
+permalink: 'a-ha/take-on-me'
+heard:
+  - emoji: '🎬'
+    media:
+    - name: '阿哈：帶我走'
+      year: '2021'
+      url: 'PjOZZ23ctBw'
+    - name: '大黃蜂'
+      year: '2018'
+    - name: '一級玩家'
+      year: '2018'
+    - name: '死侍 2'
+      year: '2018'
+    - name: '神偷奶爸 3'
+      year: '2017'
+    - name: '樂來越愛你'
+      year: '2016'
+    - name: '搖滾青春戀習曲'
+      year: '2016'
+  - emoji: '🎮'
+    media:
+      - name: '正當防衛 4'
+        year: '2018'
+        start: '33'
+        url: 'VAnO7sH0wAE'
+      - name: '潛龍諜影 V：幻痛'
+        year: '2015'
+  - emoji: '▶️'
+    media:
+      - name: '福斯 Carefree Maintenance 電視廣告'
+        year: '2013'
+        url: 'acv1_WddLdI'
+datePublished: '2020-09-22'
+dateModified: '2022-05-15'
+spotify: '2WfaOiMkCvy7F5fcp2zZ8L'
+---
+
+<LyricSection>
+
+We are talking away
+
+I don&rsquo;t know what
+
+I&rsquo;m to say I will say it anyway
+
+Today is another day to find you
+
+Shying away
+
+I will be coming for your love, okay?
+
+</LyricSection>
+
+<LyricSection>
+
+Take on me (take on me)
+
+Take me on (take on me)
+
+I will be gone
+
+In a day or two
+
+</LyricSection>
+
+<LyricSection>
+
+So needless to say
+
+I am odds and ends
+
+But I will be stumbling away
+
+Slowly learning that life is okay
+
+Say after me
+
+It&rsquo;s no better to be safe than sorry
+
+</LyricSection>
+
+<LyricSection>
+
+Take on me (take on me)
+
+Take me on (take on me)
+
+I will be gone
+
+In a day or two
+
+</LyricSection>

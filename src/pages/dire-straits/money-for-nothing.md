@@ -1,0 +1,250 @@
+---
+setup: |
+  import Layout from '../../layouts/Song.astro';
+  import LyricSection from '../../components/LyricSection.astro';
+name: 'Money for Nothing'
+album: 'Brothers in Arms'
+year: '1985'
+artist: 'Dire Straits'
+permalink: 'dire-straits/money-for-nothing'
+heard:
+  - emoji: '🎬'
+    media:
+      - name: '神偷奶爸 3'
+        year: '2017'
+      - name: '金牌特務'
+        year: '2014'
+datePublished: '2022-02-15'
+dateModified: '2022-02-15'
+spotify: '4yqtwO7MQIIXqoiRBPHAgR'
+---
+
+<LyricSection>
+
+I want my MTV...
+
+</LyricSection>
+
+<LyricSection>
+
+Now look at them yo-yos
+
+that&rsquo;s the way you do it
+
+You play the guitar on the MTV
+
+That ain&rsquo;t working
+
+that&rsquo;s the way you do it
+
+Money for nothing and your chicks for free
+
+</LyricSection>
+
+<LyricSection>
+
+Now that ain&rsquo;t working
+
+that&rsquo;s the way you do it
+
+Let me tell ya them
+
+guys ain&rsquo;t dumb
+
+Maybe get a blister on your little finger
+
+Maybe get a blister on your thumb
+
+</LyricSection>
+
+<LyricSection>
+
+We got to install microwave ovens
+
+Custom kitchen deliveries
+
+We got to move these refrigerators
+
+We got to move these colour TVs
+
+</LyricSection>
+
+<LyricSection>
+
+See the little faggot with the earring and the makeup
+
+Yeah buddy that&rsquo;s his own
+
+That little faggot got his own jet airplane
+
+That little faggot he is a millionaire
+
+</LyricSection>
+
+<LyricSection>
+
+We got to install microwave ovens
+
+Custom kitchens deliveries
+
+We got to move these refrigerators
+
+We got to move these colour TVs
+
+</LyricSection>
+
+<LyricSection>
+
+Got to install microwave ovens
+
+Custom kitchens deliveries
+
+We&rsquo;ve got to move these refrigerators
+
+Got to move these colour TVs
+
+</LyricSection>
+
+<LyricSection>
+
+I should learned to play the guitar
+
+I should learned to play them drums
+
+Look at that mama she got it
+
+Sticking in the camera man
+
+We could have some fun
+
+</LyricSection>
+
+<LyricSection>
+
+And he&rsquo;s up there
+
+what&rsquo;s that? Hawaiian noises?
+
+Banging on the bongoes like a chimpanzee
+
+Oh, that ain&rsquo;t working
+
+that&rsquo;s the way you do it
+
+Get your money for nothing
+
+get your chicks for free
+
+</LyricSection>
+
+<LyricSection>
+
+We got to install microwave ovens
+
+Custom kitchen deliveries
+
+We got to move these refrigerators
+
+We got to move these colour TVs
+
+</LyricSection>
+
+<LyricSection>
+
+Listen here
+
+Now that ain&rsquo;t working
+
+That&rsquo;s the way you do it
+
+You play the guitar on the MTV
+
+That ain&rsquo;t working
+
+That&rsquo;s the way you do it
+
+Money for nothing and your chicks for free
+
+</LyricSection>
+
+<LyricSection>
+
+Money for nothing and chicks for free
+
+Get your money for nothing
+
+And your chicks for free
+
+Money for nothing
+
+Chicks for free
+
+Get your money for nothing
+
+Chicks for free
+
+</LyricSection>
+
+<LyricSection>
+
+Money for nothing
+
+Chicks for free
+
+Get you money for nothing
+
+Get your chicks for free
+
+...
+
+</LyricSection>
+
+<LyricSection>
+
+Look at that..
+
+I want my... I want my MTV
+
+Get you money for nothing
+
+And the chicks for free
+
+Money for nothing
+
+Chicks for free
+
+Get you money for nothing
+
+And the chicks for free
+
+Get you money for nothing
+
+And the chicks for free
+
+</LyricSection>
+
+<LyricSection>
+
+Easy easy money for nothing
+
+Easy easy chicks for free
+
+Easy easy money for nothing
+
+Chicks for free
+
+</LyricSection>
+
+<LyricSection>
+
+That ain&rsquo;t working
+
+</LyricSection>
+
+<LyricSection>
+
+Money for nothing
+
+Chicks for free...
+
+</LyricSection>
