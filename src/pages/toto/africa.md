@@ -18,6 +18,11 @@ heard:
     media:
       - name: '俠盜獵車手：罪惡城市'
         year: '2002'
+  - emoji: '▶️'
+    media:
+      - name: 'Castle Lager New York 廣告'
+        year: '1998'
+        url: '0x1K2UL0t0o'
 datePublished: '2020-11-16'
 dateModified: '2022-05-03'
 spotify: '2374M0fQpWi3dLnB54qaLX'

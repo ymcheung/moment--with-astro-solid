@@ -8,6 +8,11 @@ year: '1985'
 artist: 'Tears for Fears'
 permalink: 'tears-for-fears/everybody-wants-to-rule-the-world'
 heard:
+  - emoji: '▶️'
+    media:
+      - name: 'Max’s 餐廳廣告'
+        year: '2019'
+        url: 'Z8N5-EOijno'
   - emoji: '🎬'
     media:
       - name: '大黃蜂'
@@ -21,7 +26,7 @@ heard:
       - name: '歡樂合唱團第 4 季'
         year: '2012'
 datePublished: '2020-10-05'
-dateModified: '2020-10-05'
+dateModified: '2022-07-12'
 spotify: '4RvWPyQ5RL0ao9LPZeSouE'
 ---
 

@@ -12,8 +12,13 @@ heard:
     media:
       - name: '波西米亞狂想曲'
         year: '2018'
+  - emoji: '▶️'
+    media:
+      - name: '盜俠獵車手 V 遊戲預告'
+        year: '2013'
+        url: 'Bf38HiYPMiI'
 datePublished: '2020-09-24'
-dateModified: '2020-09-24'
+dateModified: '2022-07-12'
 spotify: '2jAc9KIQ9XoZxkydXh3MVh'
 ---
 
