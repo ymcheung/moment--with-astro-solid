@@ -16,12 +16,23 @@ heard:
         year: '2019'
       - name: '波西米亞狂想曲'
         year: '2018'
+  - emoji: '▶️'
+    media:
+      - name: '日本新幹線 N700S 廣告'
+        year: '2020'
+        url: 'XzK1iAEuc7M'
+      - name: 'Strellson 廣告'
+        year: '2016'
+        url: 'Ynn6A-ddNNM'
+      - name: 'Visa 廣告'
+        year: '2013'
+        url: 'oaywi_D2Cjw'
   - emoji: '📺'
     media:
       - name: '雨傘學院第 1 季'
         year: '2019'
 datePublished: '2020-11-20'
-dateModified: '2020-11-20'
+dateModified: '2022-07-13'
 spotify: '7hQJA50XrCWABAu5v6QZ4i'
 ---
 
