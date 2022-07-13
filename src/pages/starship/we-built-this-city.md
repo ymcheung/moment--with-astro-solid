@@ -8,6 +8,17 @@ year: '1985'
 artist: 'Starship'
 permalink: 'starship/we-built-this-city'
 heard:
+  - emoji: '▶️'
+    media:
+      - name: 'Youtube 麥塊影片 1 兆次播放'
+        year: '2022'
+        url: 'YXY74kWderc'
+      - name: '英國 #SingItKitty 廣告'
+        year: '2014'
+        url: '6s-rh6R5ilc'
+      - name: '布偶歷險記電影預告片'
+        year: '2011'
+        url: 'gU4mqvGw-wY'
   - emoji: '🎮'
     media:
     - name: '盜俠獵車手 V'
@@ -17,7 +28,7 @@ heard:
     - name: '搖滾時代'
       year: '2012'
 datePublished: '2022-04-25'
-dateModified: '2022-04-25'
+dateModified: '2022-07-13'
 spotify: '6OnfBiiSc9RGKiBKKtZXgQ'
 ---
 <LyricSection>
