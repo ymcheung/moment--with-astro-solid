@@ -1,23 +1,27 @@
 ---
 import '../styles/global.scss';
-// import BaseHead from '../components/BaseHead.astro';
+import BaseHead from '../components/BaseHead.astro';
+import SiteNameHeader from '../components/SiteNameHeader.astro';
+import Footer from '../components/Footer.astro';
 
-export interface Props {
-  title: string;
-}
-
-const { title } = Astro.props as Props;
+let title = '看電影、看劇還有廣告時，聽到喜歡的音樂';
+let description = '讓電影、日劇、美劇和廣告致敬的 60 到 80 年代經典歌曲！';
+let schemaHome = true;
+let datePublished = '2020-09-21';
+let dateModified = '2022-07-14';
 ---
 
 <!DOCTYPE html>
 <html lang="zh-TW">
 
-<!-- <head>
+<head>
   <BaseHead {title} {description} {schemaHome} {datePublished} {dateModified} />
-</head> -->
+</head>
 
 <body data-body-style="home">
+  <SiteNameHeader />
   <slot />
+  <Footer />
 </body>
 
 </html>
