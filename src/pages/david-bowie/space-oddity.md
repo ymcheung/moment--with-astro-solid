@@ -8,6 +8,16 @@ year: '1969'
 artist: 'David Bowie'
 permalink: 'david-bowie/space-oddity'
 heard:
+  - emoji: '▶️'
+    media:
+      - name: 'Airbnb 電視廣告'
+        year: '2021'
+      - name: 'Volkswagon 廣告'
+        year: '2019'
+        url: 'nk2rT5gr5eY'
+      - name: 'BBC 廣告'
+        year: '2010'
+        url: 'QSzgrOYfP0I'
   - emoji: '📺'
     media:
       - name: '西方極樂園第 3 季'
@@ -23,7 +33,7 @@ heard:
       - name: '白日夢冒險王'
         year: '2013'
 datePublished: '2020-09-27'
-dateModified: '2022-02-15'
+dateModified: '2022-07-14'
 spotify: '72Z17vmmeQKAg8bptWvpVG'
 ---
 
