@@ -5,9 +5,11 @@ const year = new Date().getFullYear();
 <footer>
   <strong class="statement site">
     <img class="logo" src="/logo/monochrome.svg" alt="Moment Logo" />
-    <span>Moment 是練習作品</span>
+    <span>Moment 是練習作品</span><span class="divideDot">・</span><span class="sponsor"><a class="authorLink"
+        href="https://ymcheung.tw" target="_blank" rel="noopener">We</a>
+      Built this Project on Rock &lsquo;n Roll and Your Support.</span>
   </strong>
-  <p class="statement origin">此網站上收錄的歌詞、電影與影劇的智慧財產權皆屬於原作者。</p>
+  <p class="statement normal">此網站上收錄的歌詞、電影與影劇的智慧財產權皆屬於原作者。</p>
   <figure class="statement fromTw">
     <img class="mapTaiwan" src="/taiwan.png" alt="台灣圖示" loading="lazy">
     <figcaption class="mit">
@@ -41,7 +43,29 @@ const year = new Date().getFullYear();
     color: hsl(var(--color-shade1000));
   }
 
-  .origin {
+  .divideDot {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: inline;
+    }
+  }
+
+  .sponsor {
+    display: block;
+    margin-top: 8px;
+
+    @media screen and (min-width: 768px) {
+      display: inline;
+      margin-top: initial;
+    }
+  }
+
+  .authorLink {
+    color: inherit;
+  }
+
+  .normal {
     color: hsl(var(--color-shade1000));
   }
 
