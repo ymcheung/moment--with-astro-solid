@@ -8,6 +8,17 @@ year: '1985'
 artist: 'Simple Minds'
 permalink: 'simple-minds/dont-you-forget-about-me'
 heard:
+  - emoji: '▶️'
+    media:
+      - name: 'Meta Quest 2 廣告'
+        year: '2022'
+        url: 'LcmAlpIp3oM'
+      - name: 'Argos 聖誕節廣告'
+        year: '2019'
+        url: 'rhqybUAoHA8'
+      - name: 'Temptations 貓食廣告'
+        year: '2016'
+        url: '4zBUqWY9uF4'
   - emoji: '🎬'
     media:
       - name: '大黃蜂'
@@ -19,7 +30,7 @@ heard:
       - name: '黑鏡：San Junipero'
         year: '2016'
 datePublished: '2020-09-21'
-dateModified: '2020-09-22'
+dateModified: '2022-07-15'
 spotify: '3fH4KjXFYMmljxrcGrbPj9'
 ---
 
