@@ -1,42 +1,19 @@
-# Welcome to [Astro](https://astro.build)
+# 看電影、看劇還有廣告時，聽到喜歡的音樂
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/starter)
+現在還有人在聽 60-80 年代的歌嗎？還是頗多的。
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+https://moment.intersection.tw
 
-## 🚀 Project Structure
+找到喜歡的歌曲，點擊 `Youtube` 圖示，即可立即欣賞。
 
-Inside of your Astro project, you'll see the following folders and files:
+---
+
+使用 [Astro](http://astro.build) 建立。
+
+## 本機開發安裝
 
 ```
-/
-├── public/
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+git clone
+pnpm install
+pnpm dev
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
