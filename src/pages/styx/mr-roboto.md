@@ -38,15 +38,15 @@ spotify: '7C0rG4oWO7VeZcffyW1sK9'
 
 You are wondering who I am
 
-(Secret, secret, I've got a secret)
+(Secret, secret, I&rsquo;ve got a secret)
 
 Machine or mannequin
 
-(Secret, secret, I've got a secret)
+(Secret, secret, I&rsquo;ve got a secret)
 
 With parts made in Japan
 
-(Secret, secret, I've got a secret)
+(Secret, secret, I&rsquo;ve got a secret)
 
 I am the modern man
 
@@ -54,17 +54,17 @@ I am the modern man
 
 <LyricSection>
 
-I've got a secret
+I&rsquo;ve got a secret
 
-I've been hiding under my skin
+I&rsquo;ve been hiding under my skin
 
 My heart is human, my blood is boiling
 
 My brain IBM
 
-So if you see me acting strangely, don't be surprised
+So if you see me acting strangely, don&rsquo;t be surprised
 
-I'm just a man who needed someone, and somewhere to hide
+I&rsquo;m just a man who needed someone, and somewhere to hide
 
 To keep me alive, just keep me alive
 
@@ -74,17 +74,17 @@ Somewhere to hide, to keep me alive
 
 <LyricSection>
 
-I'm not a robot without emotions
+I&rsquo;m not a robot without emotions
 
-I'm not what you see
+I&rsquo;m not what you see
 
-I've come to help you with your problems
+I&rsquo;ve come to help you with your problems
 
 So we can be free
 
-I'm not a hero, I'm not the savior, forget what you know
+I&rsquo;m not a hero, I&rsquo;m not the savior, forget what you know
 
-I'm just a man whose circumstances went beyond his control
+I&rsquo;m just a man whose circumstances went beyond his control
 
 Beyond my control
 
@@ -100,15 +100,15 @@ We all need control
 
 I am the modern man
 
-(Secret, secret, I've got a secret)
+(Secret, secret, I&rsquo;ve got a secret)
 
 Who hides behind a mask
 
-(Secret, secret, I've got a secret)
+(Secret, secret, I&rsquo;ve got a secret)
 
 So no one else can see
 
-(Secret, secret, I've got a secret)
+(Secret, secret, I&rsquo;ve got a secret)
 
 My true identity
 
@@ -160,18 +160,18 @@ Machines dehumanize
 
 The time has come at last
 
-(Secret, secret, I've got a secret)
+(Secret, secret, I&rsquo;ve got a secret)
 
 To throw away this mask
 
-(Secret, secret, I've got a secret)
+(Secret, secret, I&rsquo;ve got a secret)
 
 Now everyone can see
 
-(Secret, secret, I've got a secret)
+(Secret, secret, I&rsquo;ve got a secret)
 
 My true identity!
 
-I'm Kilroy! Kilroy! Kilroy! Kilroy!
+I&rsquo;m Kilroy! Kilroy! Kilroy! Kilroy!
 
 </LyricSection>
