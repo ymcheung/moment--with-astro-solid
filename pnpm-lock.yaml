@@ -18,13 +18,13 @@ dependencies:
 devDependencies:
   '@astrojs/mdx': 0.8.2
   '@astrojs/sitemap': 0.2.6
-  '@astrojs/solid-js': 1.0.0_e62wtgdotf74plo7ack2qqwt6y
+  '@astrojs/solid-js': 1.0.0_a4rmmdk3bz342ooxvmfhwe743a
   astro: 1.0.2_sass@1.53.0
   autoprefixer: 10.4.7_postcss@8.4.14
   cssnano: 5.1.12_postcss@8.4.14
   postcss: 8.4.14
   sass: 1.53.0
-  solid-js: 1.4.4
+  solid-js: 1.4.8
 
 packages:
 
@@ -135,14 +135,14 @@ packages:
       zod: 3.17.3
     dev: true
 
-  /@astrojs/solid-js/1.0.0_e62wtgdotf74plo7ack2qqwt6y:
+  /@astrojs/solid-js/1.0.0_a4rmmdk3bz342ooxvmfhwe743a:
     resolution: {integrity: sha512-OEshIFX7itx8mzh3vFQgsWjzzcCYJegjY6aIoO0w2W34MP+iwEYvUwuyd6tXsDRPzTEDoCVDJDLHw/uZoNB18w==}
     engines: {node: ^14.18.0 || >=16.12.0}
     peerDependencies:
       solid-js: ^1.4.3
     dependencies:
       babel-preset-solid: 1.4.4_@babel+core@7.18.2
-      solid-js: 1.4.4
+      solid-js: 1.4.8
     transitivePeerDependencies:
       - '@babel/core'
     dev: true
@@ -3795,8 +3795,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /solid-js/1.4.4:
-    resolution: {integrity: sha512-nf/cbRzMuhb5UjbRDNfSJPqHKzUxNb9YgCQwijPUbdA3koQ/hWrz/lj0ter3lvThgxinvGPtXofDGy9bsKrXqA==}
+  /solid-js/1.4.8:
+    resolution: {integrity: sha512-XErZdnnYYXF7OwGSUAPcua2y5/ELB/c53zFCpWiEGqxTNoH1iQghzI8EsHJXk06sNn+Z/TGhb8bPDNNGSgimag==}
     dev: true
 
   /source-map-js/1.0.2:

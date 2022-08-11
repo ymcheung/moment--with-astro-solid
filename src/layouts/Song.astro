@@ -3,7 +3,7 @@ import '../styles/global.scss';
 import BaseHead from '../components/BaseHead.astro';
 import SitePathHeader from '../components/SitePathHeader.astro';
 import Heading from '../components/Heading.astro';
-import Heard from '../components/Heard.astro';
+import Heard from '../components/Heard.jsx';
 import Footer from '../components/Footer.astro';
 
 const { content } = Astro.props;
@@ -34,7 +34,7 @@ const description = `${year} 年 ${artist} 的專輯：${album}。出現在${des
     <SitePathHeader {artist} />
     <Heading {name} {album} {year} {permalink} />
     <aside class="heard deviceDesktop">
-      <!-- <Heard {heard} client:media="(min-width: 992px)" /> -->
+      <!-- <Heard {heard} client:idle /> -->
     </aside>
   </header>
   <aside class="heard deviceMobile">

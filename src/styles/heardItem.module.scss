@@ -4,10 +4,8 @@
   position: fixed;
   right: 12px;
   bottom: 24px;
-}
 
-@media screen and (min-width: 992px) {
-  .player {
+  @media screen and (min-width: 992px) {
     top: 48px;
     bottom: initial;
   }
@@ -34,22 +32,4 @@
   color: hsl(var(--color-shade700));
   font-size: 1.4rem;
   font-weight: 400;
-}
-
-.expand {
-  padding: 0;
-  vertical-align: top;
-  font-size: 0;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-
-.expand:disabled {
-  opacity: 0.12;
-  cursor: not-allowed;
-}
-
-.iconYoutube {
-  width: 32px;
 }

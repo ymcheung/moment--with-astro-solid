@@ -1,0 +1,36 @@
+.title {
+    display: block;
+    margin: 0 0 12px;
+    color: hsl(var(--color-shade700));
+    font-size: 1.6rem;
+  }
+
+.heardList {
+  display: grid;
+  grid: auto-flow dense / auto;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 992px) {
+    grid: auto auto / repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.mediaEmoji {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: hsl(var(--color-shade1100));
+  font-size: 1.8rem;
+}
+
+.mediaList {
+  margin: 0;
+  padding: 8px 12px;
+  background-color: hsl(var(--color-shade100));
+  border-radius: 12px;
+}

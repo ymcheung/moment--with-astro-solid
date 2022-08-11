@@ -1,0 +1,17 @@
+.expand {
+  padding: 0;
+  vertical-align: top;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.12;
+    cursor: not-allowed;
+  }
+}
+
+.iconYoutube {
+  width: 32px;
+}
