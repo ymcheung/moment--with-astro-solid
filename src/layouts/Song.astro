@@ -12,14 +12,12 @@ const { name, album, year, heard, artist, permalink, datePublished, dateModified
 const title = `聽到 ${name} (${artist}) 的電影、電視劇`;
 
 const descriptionHeard = (heards) => {
-  const lv1 = heards.map(({ media }) => {
-    const lv2 = media.map(({ name, year }) => {
-      const mediaUnit = `${name} (${year})`;
-      return mediaUnit;
-    });
-    return lv2;
-  });
-  return lv1.flat(1).join('、');
+  const nameWithYear = heards.map(({ media }) =>
+    media.map(({ name, year }) =>
+      `${name} (${year})`
+    )
+  );
+  return nameWithYear.flat(1).join('、');
 }
 
 const description = `${year} 年 ${artist} 的專輯：${album}。出現在${descriptionHeard(heard)}。`;
@@ -36,7 +34,7 @@ const description = `${year} 年 ${artist} 的專輯：${album}。出現在${des
     <SitePathHeader {artist} />
     <Heading {name} {album} {year} {permalink} />
     <aside class="heard deviceDesktop">
-      <Heard {heard} />
+      <!-- <Heard {heard} client:media="(min-width: 992px)" /> -->
     </aside>
   </header>
   <aside class="heard deviceMobile">
