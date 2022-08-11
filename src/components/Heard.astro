@@ -25,16 +25,19 @@ console.log(statePlayButton)
 
 <strong class="title">出現在</strong>
 <ul class="heardList">
-{
-  heard.map(({ emoji, media }) => {
-    return(
-      <li>
-        <strong class="mediaEmoji">{emoji}</strong>
-        <HeardItem media={media} />
-      </li>
-    )
-  })
-}
+  {
+  heard.map(({ emoji, media }) =>
+  <li>
+    <strong class="mediaEmoji">{emoji}</strong>
+    <ul class="mediaList">
+      {
+      media.map(({ name, year, url, start }) => (
+      <HeardItem name={name} year={year} url={url} start={start} />))
+      }
+    </ul>
+  </li>
+  )
+  }
 </ul>
 
 <style lang="scss">
@@ -66,6 +69,13 @@ console.log(statePlayButton)
     margin-bottom: 4px;
     color: hsl(var(--color-shade1100));
     font-size: 1.8rem;
+  }
+
+  .mediaList {
+    margin: 0;
+    padding: 8px 12px;
+    background-color: hsl(var(--color-shade100));
+    border-radius: 12px;
   }
 
   .player {
