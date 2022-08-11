@@ -2,7 +2,7 @@
 import Home from '../layouts/Home.astro';
 import SongPreview from '../components/SongPreview.astro';
 
-let allSongs = await Astro.glob('./*/*.md');
+let allSongs = await Astro.glob('./*/*.mdx');
 
 allSongs = allSongs.sort((older, newer) =>
 	new Date(newer.frontmatter.dateModified).valueOf() - new Date(older.frontmatter.dateModified).valueOf()

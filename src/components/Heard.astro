@@ -20,7 +20,7 @@ const { heard } = Astro.props;
     return(
       <li>
         <strong class="mediaEmoji">{emoji}</strong>
-        <HeardItem media={media} client:idle />
+        <HeardItem media={media} />
       </li>
     )
   })
