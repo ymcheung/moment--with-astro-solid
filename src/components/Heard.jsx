@@ -1,3 +1,4 @@
+import { For } from 'solid-js';
 import { createStore } from 'solid-js/store';
 import HeardItem from './HeardItem.jsx';
 import PlayButton from './PlayButton.jsx';
@@ -14,30 +15,31 @@ export default function Heard({ heard }) {
   const [isDisabled, setIsDisabled] = createStore(initialState);
 
   const handleClickPlay = (url) => {
-    setIsDisabled({ ...initialState, [url]: true })
+    setIsDisabled({ ...initialState, [url]: true });
   }
 
   return (
     <>
       <strong className={styles.title}>出現在</strong>
       <ul className={styles.heardList}>
-        {heard.map(({ emoji, media }) =>
-        <li>
-          <strong className={styles.mediaEmoji}>{emoji}</strong>
-          <ul className={styles.mediaList}>
-            {
-            media.map(({ name, year, url, start }) => (
-            <HeardItem name={name} year={year} url={url} start={start}>
-              {url &&
-              <PlayButton name={name} isDisabled={isDisabled[name]} onClick={() => handleClickPlay(url)} />
-              }
-            </HeardItem>
-            ))
-            }
-          </ul>
-        </li>
-        )
-        }
+        <For each={heard}>
+          {({ emoji, media }) =>
+            <li>
+              <strong className={styles.mediaEmoji}>{emoji}</strong>
+              <ul className={styles.mediaList}>
+                <For each={media}>
+                  {({ name, year, url, start }) =>
+                    <HeardItem name={name} year={year} url={url} start={start}>
+                      {url &&
+                        <PlayButton name={name} isDisabled={isDisabled[url]} url={url} handleClickPlay={handleClickPlay} />
+                      }
+                    </HeardItem>
+                  }
+                </For>
+              </ul>
+            </li>
+          }
+        </For>
       </ul>
     </>
   )

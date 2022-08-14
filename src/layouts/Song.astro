@@ -34,11 +34,11 @@ const description = `${year} 年 ${artist} 的專輯：${album}。出現在${des
     <SitePathHeader {artist} />
     <Heading {name} {album} {year} {permalink} />
     <aside class="heard deviceDesktop">
-      <!-- <Heard {heard} client:idle /> -->
+      <Heard {heard} client:idle />
     </aside>
   </header>
   <aside class="heard deviceMobile">
-    <Heard {heard} />
+    <Heard {heard} client:idle />
   </aside>
   <main class="content">
     <h2 class="songTitle">歌詞</h2>
