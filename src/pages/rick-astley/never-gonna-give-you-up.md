@@ -8,6 +8,11 @@ year: '1987'
 artist: 'Rick Astley'
 permalink: 'rick-astley/never-gonna-give-you-up'
 heard:
+  - emoji: '▶️'
+    media:
+      - name: 'CSAA InsurAAAnce 廣告'
+        year: '2022'
+        url: 'GtL1huin9EE'
   - emoji: '📺'
     media:
       - name: '闇第 2 季'
@@ -24,7 +29,7 @@ heard:
       - name: '樂高蝙蝠俠電影'
         year: '2017'
 datePublished: '2020-12-29'
-dateModified: '2022-05-15'
+dateModified: '2022-08-16'
 spotify: '7GhIk7Il098yCjg4BQjzvb'
 ---
 
