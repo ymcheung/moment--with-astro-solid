@@ -1,118 +1,135 @@
 ---
-import '../styles/global.scss';
-import BaseHead from '../components/BaseHead.astro';
-import SitePathHeader from '../components/SitePathHeader.astro';
-import Heading from '../components/Heading.astro';
-import Heard from '../components/Heard';
-import Footer from '../components/Footer.astro';
+import "../styles/global.scss";
+import BaseHead from "../components/BaseHead.astro";
+import SitePathHeader from "../components/SitePathHeader.astro";
+import Heading from "../components/Heading.astro";
+import Heard from "../components/Heard";
+import Footer from "../components/Footer.astro";
 
 const { content } = Astro.props;
-const { name, album, year, heard, artist, permalink, datePublished, dateModified } = content;
+const {
+  name,
+  album,
+  year,
+  heard,
+  artist,
+  permalink,
+  datePublished,
+  dateModified,
+} = content;
 
 const title = `聽到 ${name} (${artist}) 的電影、電視劇`;
 
 const descriptionHeard = (heards) => {
   const nameWithYear = heards.map(({ media }) =>
-    media.map(({ name, year }) =>
-      `${name} (${year})`
-    )
+    media.map(({ name, year }) => `${name} (${year})`)
   );
-  return nameWithYear.flat(1).join('、');
-}
+  return nameWithYear.flat(1).join("、");
+};
 
-const description = `${year} 年 ${artist} 的專輯：${album}。出現在${descriptionHeard(heard)}。`;
+const description = `${year} 年 ${artist} 的專輯：${album}。出現在${descriptionHeard(
+  heard
+)}。`;
 ---
 
 <html lang="zh-TW">
+  <head>
+    <BaseHead
+      {title}
+      {description}
+      {name}
+      {artist}
+      {permalink}
+      {datePublished}
+      {dateModified}
+    />
+  </head>
 
-<head>
-  <BaseHead {title} {description} {name} {artist} {permalink} {datePublished} {dateModified} />
-</head>
-
-<body data-body-style="song">
-  <header class="songMeta">
-    <SitePathHeader {artist} />
-    <Heading {name} {album} {year} {permalink} />
-    <aside class="heard deviceDesktop">
-      <Heard {heard} client:idle />
+  <body data-body-style="song">
+    <header class="songMeta">
+      <SitePathHeader {artist} />
+      <Heading {name} {album} {year} {permalink} />
+      <aside class="heard deviceDesktop">
+        <Heard {heard} media="Desktop" client:idle />
+      </aside>
+    </header>
+    <aside class="heard deviceMobile">
+      <Heard {heard} media="Mobile" client:idle />
     </aside>
-  </header>
-  <aside class="heard deviceMobile">
-    <Heard {heard} client:idle />
-  </aside>
-  <main class="content">
-    <h2 class="songTitle">歌詞</h2>
-    <article class="songLyric">
-      <slot />
-    </article>
-  </main>
-  <Footer />
-</body>
+    <main class="content">
+      <h2 class="songTitle">歌詞</h2>
+      <article class="songLyric">
+        <slot />
+      </article>
+    </main>
+    <Footer />
+    <style lang="scss">
+      [data-body-style="song"] {
+        grid: "meta" auto "heard" auto "lyric" auto "footer" auto / auto;
+        background: hsl(var(--color-shade0));
 
+        @media screen and (min-width: 992px) {
+          grid: "meta lyric" auto "heard lyric" auto "footer footer" auto / 400px minmax(
+              10px,
+              560px
+            );
+          align-items: start;
+          justify-content: center;
+          column-gap: 48px;
+        }
+      }
+
+      .songMeta {
+        grid-area: meta;
+        position: sticky;
+        top: 0;
+        font-family: var(--font-body);
+        background: hsla(var(--color-shade0), 0.5);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+      }
+
+      .heard {
+        grid-area: heard;
+
+        &.deviceMobile {
+          margin: 0 16px 24px;
+
+          @media screen and (min-width: 992px) {
+            display: none;
+          }
+        }
+
+        &.deviceDesktop {
+          display: none;
+
+          @media screen and (min-width: 992px) {
+            display: block;
+          }
+        }
+      }
+
+      .content {
+        grid-area: lyric;
+        margin-bottom: 64px;
+        padding: 0 16px;
+
+        @media screen and (min-width: 992px) {
+          padding: 48px 0 0;
+        }
+      }
+
+      .songTitle {
+        margin: 0 0 12px;
+        color: hsl(var(--color-dawn));
+        font-size: 1.6rem;
+      }
+
+      .songLyric {
+        display: grid;
+        row-gap: 40px;
+        font-family: var(--font-body);
+      }
+    </style>
+  </body>
 </html>
-
-<style lang="scss">
-  [data-body-style="song"] {
-    grid: "meta" auto "heard" auto "lyric" auto "footer" auto / auto;
-    background: hsl(var(--color-shade0));
-
-    @media screen and (min-width: 992px) {
-      grid: "meta lyric" auto "heard lyric" auto "footer footer" auto / 400px minmax(10px, 560px);
-      align-items: start;
-      justify-content: center;
-      column-gap: 48px;
-    }
-  }
-
-  .songMeta {
-    grid-area: meta;
-    position: sticky;
-    top: 0;
-    font-family: var(--font-body);
-    background: hsla(var(--color-shade0), 0.5);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-  }
-
-  .heard {
-    grid-area: heard;
-
-    &.deviceMobile {
-      margin: 0 16px 24px;
-
-      @media screen and (min-width: 992px) {
-        display: none;
-      }
-    }
-
-    &.deviceDesktop {
-      display: none;
-
-      @media screen and (min-width: 992px) {
-        display: block;
-      }
-    }
-  }
-
-  .content {
-    grid-area: lyric;
-    margin-bottom: 64px;
-    padding: 0 16px;
-
-    @media screen and (min-width: 992px) {
-      padding: 48px 0 0;
-    }
-  }
-
-  .songTitle {
-    margin: 0 0 12px;
-    color: hsl(var(--color-dawn));
-    font-size: 1.6rem;
-  }
-
-  .songLyric {
-    display: grid;
-    row-gap: 40px;
-    font-family: var(--font-body);
-  }
-</style>

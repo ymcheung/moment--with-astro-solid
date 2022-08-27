@@ -31,6 +31,47 @@
 .mediaList {
   margin: 0;
   padding: 8px 12px;
-  background-color: hsl(var(--color-shade100));
+  background-color: hsla(var(--color-shade100) / 0.5);
   border-radius: 12px;
+}
+
+.player {
+  position: fixed;
+  right: 0;
+  bottom: 16px;
+  left: 0;
+  margin: 0 auto;
+  padding-top: 32px;
+
+  // &::backdrop {
+    // display: none;
+    // background-color: hsla(var(--color-shade100) / 0.5);
+    // pointer-events: none;
+  // }
+
+  @media screen and (min-width: 768px) {
+    top: 16px;
+    right: 16px;
+    bottom: unset;
+    left: unset;
+    margin: 0;
+  }
+
+  &Action {
+    text-align: right;
+  }
+
+  &Iframe {
+    border: 0;
+  }
+}
+
+.close {
+  appearance: none;
+  color: hsl(var(--color-shade1100));
+  font-size: 16px;
+  line-height: 20px;
+  background-color: hsl(var(--color-shade300));
+  border: 0;
+  border-radius: 8px;
 }
