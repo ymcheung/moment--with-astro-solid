@@ -1,5 +1,6 @@
-import { For, onMount, createSignal } from 'solid-js';
-import { createStore } from 'solid-js/store';
+import { For, createSignal } from 'solid-js';
+import { createStore, unwrap } from 'solid-js/store';
+import { Portal } from 'solid-js/web';
 import HeardItem from './HeardItem.jsx';
 import PlayButton from './PlayButton.jsx';
 import styles from '../styles/heard.module.scss';
@@ -15,38 +16,31 @@ export default function Heard(props) {
   const [isDisabled, setIsDisabled] = createStore({ ...initialState });
   const [showIframe, setShowIframe] = createSignal(false);
 
-  const handleClickPlay = (url) => {
-    setIsDisabled({ ...initialState, [url]: true });
-    if (!showIframe()) {
-      setShowIframe(true);
-    }
-  }
-
   const handleCloseIframe = () => {
     setShowIframe(false);
+    setIsDisabled({ ...initialState })
+  }
+
+  const handleClickPlay = (url) => {
+    setShowIframe(false);
+    setIsDisabled({ ...initialState, [url]: true });
+    setShowIframe(true);
   }
 
   const Player = () => {
+
+    const youtubeUrls = unwrap(isDisabled);
+    const slug = Object.keys(youtubeUrls).find(key => youtubeUrls[key] === true);
+
     return (
       <section className={styles.player}>
         <div className={styles.playerAction}>
-          <button className={styles.close} onClick={handleCloseIframe}>x</button>
+          <button className={styles.close} onClick={handleCloseIframe}>X</button>
         </div>
-        <iframe className={styles.playerIframe} />
+        <iframe className={styles.playerIframe} src={`https://www.youtube.com/embed/${slug}`} allow="gyroscope; picture-in-picture" allowFullScreen />
       </section>
     )
   }
-
-  // let dialog;
-
-  // const handleModalOpen = () => {
-  //   onMount(() => dialog.showModal());
-  // };
-
-  // const handleModalClose = () => {
-  //   onMount(() => dialog.close());
-  //   setIsDisabled({ ...initialState });
-  // };
 
   return (
     <>
@@ -77,8 +71,9 @@ export default function Heard(props) {
           }
         </For>
       </ul>
-      {console.log(showIframe())}
-      {showIframe() && <Player />}
+      <Portal mount={document.getElementById('song')}>
+        {showIframe() && <Player />}
+      </Portal>
     </>
   )
 }

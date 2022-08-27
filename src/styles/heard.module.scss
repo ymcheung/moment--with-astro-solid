@@ -38,16 +38,15 @@
 .player {
   position: fixed;
   right: 0;
-  bottom: 16px;
+  bottom: 0;
   left: 0;
   margin: 0 auto;
   padding-top: 32px;
-
-  // &::backdrop {
-    // display: none;
-    // background-color: hsla(var(--color-shade100) / 0.5);
-    // pointer-events: none;
-  // }
+  padding-right: 12px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  background: hsla(var(--color-shade0) / 0.5);
+  backdrop-filter: blur(8px);
 
   @media screen and (min-width: 768px) {
     top: 16px;
@@ -55,23 +54,34 @@
     bottom: unset;
     left: unset;
     margin: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: unset;
+    backdrop-filter: unset;
   }
 
   &Action {
+    margin-top: -32px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     text-align: right;
   }
 
   &Iframe {
+    width: 100%;
     border: 0;
   }
 }
 
 .close {
+  padding-right: 8px;
+  padding-left: 8px;
   appearance: none;
   color: hsl(var(--color-shade1100));
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
   background-color: hsl(var(--color-shade300));
   border: 0;
-  border-radius: 8px;
+  border-radius: 50%;
 }

@@ -45,16 +45,16 @@ const description = `${year} 年 ${artist} 的專輯：${album}。出現在${des
     />
   </head>
 
-  <body data-body-style="song">
+  <body id="song" data-body-style="song">
     <header class="songMeta">
       <SitePathHeader {artist} />
       <Heading {name} {album} {year} {permalink} />
       <aside class="heard deviceDesktop">
-        <Heard {heard} media="Desktop" client:idle />
+        <Heard {heard} client:idle />
       </aside>
     </header>
     <aside class="heard deviceMobile">
-      <Heard {heard} media="Mobile" client:idle />
+      <Heard {heard} client:idle />
     </aside>
     <main class="content">
       <h2 class="songTitle">歌詞</h2>
@@ -84,7 +84,7 @@ const description = `${year} 年 ${artist} 的專輯：${album}。出現在${des
         position: sticky;
         top: 0;
         font-family: var(--font-body);
-        background: hsla(var(--color-shade0), 0.5);
+        background: hsla(var(--color-shade0) / 0.5);
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
       }
