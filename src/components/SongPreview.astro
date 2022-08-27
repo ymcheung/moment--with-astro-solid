@@ -14,11 +14,16 @@ const { url, name, album, year, artist } = Astro.props;
   <a class="link" href={url}>
     <figure class="set">
       <div class="album">
-        <img class="albumCover" src={`/album${url}.jpg`} alt={`${album} 專輯封面`} loading="lazy" />
+        <img
+          class="albumCover"
+          src={`/album${url}.jpg`}
+          alt={`${album} 專輯封面`}
+          loading="lazy"
+        />
       </div>
       <figcaption class="description">
         <h2 class="name">{name}</h2>
-        <span class="whoWhen" set:html={`${artist}﹒${year}`} />
+        <span class="whoWhen" set:html={`${artist}﹒${year}`}></span>
       </figcaption>
     </figure>
   </a>
@@ -57,7 +62,7 @@ const { url, name, album, year, artist } = Astro.props;
   .albumCover {
     max-width: 100%;
     aspect-ratio: 1;
-    border: 1px solid hsla(var(--color-shade300), 0.5);
+    border: 1px solid hsla(var(--color-shade300) / 0.5);
     border-radius: 4px;
   }
 

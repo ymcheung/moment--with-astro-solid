@@ -10,7 +10,11 @@ const { name, album, year, permalink } = Astro.props;
 ---
 
 <h1 class="song">
-	<img class="albumCover" src={`/album/${permalink}.jpg`} alt={`收錄在專輯 ${album}。`} />
+	<img
+		class="albumCover"
+		src={`/album/${permalink}.jpg`}
+		alt={`收錄在專輯 ${album}。`}
+	/>
 	<span class="name">{name}</span>
 	<span class="year">{year}</span>
 </h1>
@@ -32,7 +36,7 @@ const { name, album, year, permalink } = Astro.props;
 		grid-area: cover;
 		max-width: 100%;
 		aspect-ratio: 1;
-		border: 1px solid hsla(var(--color-shade300), 0.5);
+		border: 1px solid hsla(var(--color-shade300) / 0.5);
 		border-radius: 4px;
 	}
 
