@@ -78,7 +78,9 @@
   padding-right: 8px;
   padding-left: 8px;
   appearance: none;
+  cursor: pointer;
   color: hsl(var(--color-shade1100));
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 24px;
   background-color: hsl(var(--color-shade300));
