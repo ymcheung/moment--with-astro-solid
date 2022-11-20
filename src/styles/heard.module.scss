@@ -1,6 +1,7 @@
 .title {
     display: block;
     margin: 0 0 12px;
+    font-family: var(--font-body);
     color: hsl(var(--color-shade700));
     font-size: 1.6rem;
   }
@@ -75,13 +76,14 @@
 }
 
 .close {
-  padding-right: 8px;
-  padding-left: 8px;
+  width: 32px;
+  height: 32px;
   appearance: none;
   cursor: pointer;
+  text-align: center;
   color: hsl(var(--color-shade1100));
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   background-color: hsl(var(--color-shade300));
   border: 0;

@@ -2,10 +2,12 @@
 export interface Props {
   title: string;
   description: string;
-  name: string;
-  permalink: string;
+  name?: string;
+  permalink?: string;
+  artist?: string;
   schemaHome: boolean;
-  artist: string;
+  datePublished: string;
+  dateModified: string;
 }
 
 const {

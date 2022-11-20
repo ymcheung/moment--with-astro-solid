@@ -12,25 +12,27 @@ let dateModified = '2022-07-14';
 ---
 
 <!DOCTYPE html>
-<html lang="zh-TW">
-
-<head>
-  <BaseHead {title} {description} {schemaHome} {datePublished} {dateModified} />
-</head>
-
-<body data-body-style="home">
-  <SiteNameHeader />
-  <slot />
-  <Footer />
-</body>
-
+<html lang='zh-TW'>
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      schemaHome={schemaHome}
+      datePublished={datePublished}
+      dateModified={dateModified}
+    />
+  </head>
+  <body data-body-style='home'>
+    <SiteNameHeader />
+    <slot />
+    <Footer />
+    <style lang='scss'>
+      [data-body-style='home'] {
+        grid: 'sitename' auto 'songs' 1fr 'footer' auto / minmax(10px, 1168px);
+        justify-items: stretch;
+        justify-content: center;
+        background: hsl(var(--color-shade0));
+      }
+    </style>
+  </body>
 </html>
-
-<style lang="scss">
-  [data-body-style="home"] {
-    grid: "sitename" auto "songs" 1fr "footer" auto / minmax(10px, 1168px);
-    justify-items: stretch;
-    justify-content: center;
-    background: hsl(var(--color-shade0));
-  }
-</style>
