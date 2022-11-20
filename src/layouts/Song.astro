@@ -1,10 +1,10 @@
 ---
-import "../styles/global.scss";
-import BaseHead from "../components/BaseHead.astro";
-import SitePathHeader from "../components/SitePathHeader.astro";
-import Heading from "../components/Heading.astro";
-import Heard from "../components/Heard";
-import Footer from "../components/Footer.astro";
+import '../styles/global.scss';
+import BaseHead from '../components/BaseHead.astro';
+import SitePathHeader from '../components/SitePathHeader.astro';
+import Heading from '../components/Heading.astro';
+import Heard from '../components/Heard';
+import Footer from '../components/Footer.astro';
 
 const { content } = Astro.props;
 const {
@@ -15,16 +15,17 @@ const {
   artist,
   permalink,
   datePublished,
-  dateModified,
+  dateModified
 } = content;
 
 const title = `聽到 ${name} (${artist}) 的電影、電視劇`;
+let schemaHome = false;
 
 const descriptionHeard = (heards) => {
   const nameWithYear = heards.map(({ media }) =>
     media.map(({ name, year }) => `${name} (${year})`)
   );
-  return nameWithYear.flat(1).join("、");
+  return nameWithYear.flat(1).join('、');
 };
 
 const description = `${year} 年 ${artist} 的專輯：${album}。出現在${descriptionHeard(
@@ -32,44 +33,45 @@ const description = `${year} 年 ${artist} 的專輯：${album}。出現在${des
 )}。`;
 ---
 
-<html lang="zh-TW">
+<html lang='zh-TW'>
   <head>
     <BaseHead
-      {title}
-      {description}
-      {name}
-      {artist}
-      {permalink}
-      {datePublished}
-      {dateModified}
+      title={title}
+      description={description}
+      name={name}
+      artist={artist}
+      permalink={permalink}
+      schemaHome={schemaHome}
+      datePublished={datePublished}
+      dateModified={dateModified}
     />
   </head>
 
-  <body id="song" data-body-style="song">
-    <header class="songMeta">
-      <SitePathHeader {artist} />
-      <Heading {name} {album} {year} {permalink} />
-      <aside class="heard deviceDesktop">
-        <Heard {heard} client:idle />
+  <body id='song' data-body-style='song'>
+    <header class='songMeta'>
+      <SitePathHeader artist={artist} />
+      <Heading name={name} album={album} year={year} permalink={permalink} />
+      <aside class='heard deviceDesktop'>
+        <Heard heard={heard} client:idle />
       </aside>
     </header>
-    <aside class="heard deviceMobile">
-      <Heard {heard} client:idle />
+    <aside class='heard deviceMobile'>
+      <Heard heard={heard} client:idle />
     </aside>
-    <main class="content">
-      <h2 class="songTitle">歌詞</h2>
-      <article class="songLyric">
+    <main class='content'>
+      <h2 class='songTitle'>歌詞</h2>
+      <article class='songLyric'>
         <slot />
       </article>
     </main>
     <Footer />
-    <style lang="scss">
-      [data-body-style="song"] {
-        grid: "meta" auto "heard" auto "lyric" auto "footer" auto / auto;
+    <style lang='scss'>
+      [data-body-style='song'] {
+        grid: 'meta' auto 'heard' auto 'lyric' auto 'footer' auto / auto;
         background: hsl(var(--color-shade0));
 
         @media screen and (min-width: 992px) {
-          grid: "meta lyric" auto "heard lyric" auto "footer footer" auto / 400px minmax(
+          grid: 'meta lyric' auto 'heard lyric' auto 'footer footer' auto / 400px minmax(
               10px,
               560px
             );

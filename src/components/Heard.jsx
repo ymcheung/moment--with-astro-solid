@@ -35,7 +35,7 @@ export default function Heard(props) {
     return (
       <section className={styles.player}>
         <div className={styles.playerAction}>
-          <button className={styles.close} onClick={handleCloseIframe}>X</button>
+          <button className={styles.close} onClick={handleCloseIframe}>x</button>
         </div>
         <iframe className={styles.playerIframe} src={`https://www.youtube.com/embed/${slug}`} allow="gyroscope; picture-in-picture" allowFullScreen />
       </section>
