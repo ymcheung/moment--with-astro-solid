@@ -52,11 +52,11 @@ const description = `${year} 年 ${artist} 的專輯：${album}。出現在${des
       <SitePathHeader artist={artist} />
       <Heading name={name} album={album} year={year} permalink={permalink} />
       <aside class='heard deviceDesktop'>
-        <Heard heard={heard} client:idle='solid-js' />
+        <Heard heard={heard} client:only='solid-js' />
       </aside>
     </header>
     <aside class='heard deviceMobile'>
-      <Heard heard={heard} client:idle='solid-js' />
+      <Heard heard={heard} client:only='solid-js' />
     </aside>
     <main class='content'>
       <h2 class='songTitle'>歌詞</h2>
